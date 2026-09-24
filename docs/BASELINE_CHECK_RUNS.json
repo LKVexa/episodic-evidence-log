@@ -1,0 +1,15 @@
+{
+  "schema": "jy/check-runs/v2",
+  "job_id": "JY-S039-P001",
+  "run": "maintenance run-0001 (audit A029)",
+  "version": "0.1.1-partial",
+  "executor": "claude cowork session 01SaQzDRzMFXvRabmCC6JDJD",
+  "date": "2026-09-14",
+  "runs": [
+    {"check": "baseline unit suite (python3 -m unittest discover -s tests -t .)", "result": "12/12 PASS"},
+    {"check": "live defect probes (aliasing, error-contract, NaN canonicalization, record atomicity)", "result": "4 findings reproduced on baseline; probe transcript in audit records"},
+    {"check": "candidate unit suite on final bytes", "result": "20/20 PASS"},
+    {"check": "Windows-native launch", "result": "UNRUN — no Windows runtime this session"},
+    {"check": "independent review", "result": "NOT PERFORMED"}
+  ]
+}
